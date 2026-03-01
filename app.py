@@ -23,6 +23,10 @@ load_dotenv()
 # APP CONFIG
 # ===============================
 app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "App is running 🚀"
 app.secret_key = "supersecretkey"
 
 login_manager = LoginManager()
@@ -546,9 +550,12 @@ def test_message():
     )
     return f"Message SID: {message.sid}"
 
+    
+
 # ===============================
 # RUN
 # ===============================
+# ======= LAST PART OF FILE =======
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
     
