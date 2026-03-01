@@ -23,10 +23,6 @@ load_dotenv()
 # APP CONFIG
 # ===============================
 app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "App is running 🚀"
 app.secret_key = "supersecretkey"
 
 login_manager = LoginManager()
