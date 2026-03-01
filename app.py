@@ -385,7 +385,8 @@ def check_today_birthdays():
 
 scheduler = BackgroundScheduler()
 scheduler.add_job(check_today_birthdays, 'cron', hour=9, minute=0)
-scheduler.start()
+if __name__ == "__main__":
+    scheduler.start()
 
 # ===============================
 # PROFILE PAGE
