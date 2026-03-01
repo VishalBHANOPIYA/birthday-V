@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Birthday</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="edit-body"></body>
+
+<div class="premium-edit-wrapper">
+
+    <div class="premium-edit-card">
+
+        <div class="edit-header">
+            ✨ Edit Birthday
+        </div>
+
+        <form method="POST">
+
+            <div class="input-group">
+                <span class="input-icon">👤</span>
+                <input type="text" name="name" value="{{ b[1] }}" required>
+            </div>
+
+            <div class="input-group">
+                <span class="input-icon">📅</span>
+                <input type="date" name="date" value="{{ b[2] }}" required>
+            </div>
+
+            <div class="input-group">
+                <span class="input-icon">🤝</span>
+                <input type="text" name="relation" value="{{ b[3] }}" required>
+            </div>
+
+            <div class="input-group">
+                <span class="input-icon">📞</span>
+                <input type="text" name="phone" value="{{ b[4] }}" required>
+            </div>
+
+            <button type="submit" class="super-btn">
+                🚀 Update Birthday
+            </button>
+
+            <a href="{{ url_for('home') }}" class="back-btn">
+                ← Back to Dashboard
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

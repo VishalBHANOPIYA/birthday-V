@@ -1,0 +1,1540 @@
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2f7, #dbeafe);
+    color: #1d71e8;
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: #1e3a8a;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-right span {
+    color: #e2e8f0;
+    margin-right: 15px;
+}
+
+.logout-btn {
+    padding: 8px 16px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.logout-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 85%;
+    margin: 40px auto;
+}
+
+/* ================= DASHBOARD TITLE ================= */
+
+.dashboard-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* ================= STATS ================= */
+
+.stats {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1e3a8a;
+}
+
+/* ================= ADD BUTTON ================= */
+
+.add-btn {
+    padding: 12px 20px;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ================= BIRTHDAY SECTION ================= */
+
+.birthday-section {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.birthday-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-radius: 12px;
+    background: #f1f5f9;
+    margin-bottom: 15px;
+}
+
+.birthday-card:hover {
+    background: #e2e8f0;
+}
+
+.birthday-info strong {
+    color: #1f2937;
+    font-size: 16px;
+}
+
+.age-badge {
+    background: #3b82f6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.countdown {
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.delete-btn {
+    padding: 6px 14px;
+    background: #dc2626;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.edit-btn {
+    padding: 6px 14px;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ================= FORMS ================= */
+
+form input,
+form select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: white;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ================= AUTH PAGE ================= */
+
+.auth-body {
+    height: 100vh;
+    background: linear-gradient(135deg, #eef2f7, #dbeafe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth-card {
+    background: linear-gradient(135deg, #8e2de2, #c471ed);
+    width: 380px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.auth-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-btn:hover {
+    background: #1d4ed8;
+}
+/* ============================= */
+/* PREMIUM EDIT PAGE STYLING */
+/* ============================= */
+
+.premium-edit-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+    animation: bgMove 8s ease infinite alternate;
+}
+
+@keyframes bgMove {
+    0% { background: linear-gradient(135deg, #eef2ff, #e0f2fe); }
+    100% { background: linear-gradient(135deg, #e0f2fe, #f0f9ff); }
+}
+
+/* Glass Card */
+
+.premium-edit-card {
+    width: 500px;
+    padding: 50px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+    animation: slideUp 0.6s ease forwards;
+    transition: 0.4s ease;
+}
+
+.premium-edit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 40px 90px rgba(0,0,0,0.2);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+
+.edit-header {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1e3a8a;
+}
+
+/* Input Group */
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+/* Inputs */
+
+.input-group input {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border-radius: 14px;
+    border: none;
+    background: rgba(255,255,255,0.7);
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.3);
+    transform: scale(1.02);
+}
+
+/* Button */
+
+.super-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 16px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(45deg, #2563eb, #1e3a8a);
+    color: white;
+    margin-top: 15px;
+    transition: 0.4s ease;
+}
+
+.super-btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(37,99,235,0.4);
+}
+
+/* Back Button */
+
+.back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #1e3a8a;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: #2563eb;
+    transform: translateX(-3px);
+}
+/* ============================= */
+/* GLOBAL PURPLE THEME */
+/* ============================= */
+
+body {
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+    color: #4c1d95;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: #4c1d95;
+}
+
+.logo,
+.nav-right span {
+    color: #ede9fe;
+}
+
+.logout-btn {
+    background: #6d28d9;
+    color: #ede9fe;
+}
+
+.logout-btn:hover {
+    background: #5b21b6;
+}
+
+/* ================= CARDS ================= */
+
+.stat-card,
+.birthday-section,
+.premium-edit-card,
+.add-card {
+    background: #5b21b6;
+    color: #ede9fe;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 60px rgba(76, 29, 149, 0.4);
+}
+
+.stat-number {
+    color: #ede9fe;
+}
+
+/* ================= BIRTHDAY CARD ================= */
+
+.birthday-card {
+    background: #6d28d9;
+    color: #ede9fe;
+}
+
+.birthday-card:hover {
+    background: #7c3aed;
+}
+
+/* ================= INPUTS ================= */
+
+.input-group input,
+form input,
+form select {
+    background: rgba(255,255,255,0.15);
+    color: #ede9fe;
+    border: none;
+}
+
+.input-group input:focus,
+form input:focus,
+form select:focus {
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.4);
+}
+
+/* ================= BUTTONS ================= */
+
+.super-btn,
+.add-btn,
+.update-btn,
+.edit-btn {
+    background: linear-gradient(45deg, #7c3aed, #4c1d95);
+    color: #ede9fe;
+}
+
+.super-btn:hover,
+.add-btn:hover,
+.update-btn:hover,
+.edit-btn:hover {
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.5);
+    transform: translateY(-4px);
+}
+
+/* Delete stays red for clarity */
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+/* ================= HEADINGS ================= */
+
+.dashboard-title,
+.edit-header {
+    color: #4c1d95;
+}
+
+/* ================= BACK LINKS ================= */
+
+.back-btn,
+.dashboard-link {
+    color: #4c1d95;
+}
+
+.back-btn:hover,
+.dashboard-link:hover {
+    color: #6d28d9;
+}
+/* FIX STAT CARD TEXT VISIBILITY */
+
+.stat-card {
+    background: #5b21b6;
+    color: #ede9fe !important;
+}
+
+.stat-card div,
+.stat-card p,
+.stat-card span {
+    color: #ede9fe !important;
+}
+
+.stat-number {
+    color: #ffffff !important;
+}
+/* FORCE REMOVE PINK */
+
+.navbar {
+    background: #4c1d95 !important;
+}
+
+.logout-btn {
+    background: #6d28d9 !important;
+}
+
+.add-btn {
+    background: #6d28d9 !important;
+}
+
+.edit-btn {
+    background: #7c3aed !important;
+}
+
+.super-btn {
+    background: linear-gradient(45deg, #7c3aed, #4c1d95) !important;
+}
+/* REMOVE ANY PINK LEFT */
+
+button,
+a,
+.badge,
+.age-badge {
+    background-color: #7c3aed !important;
+    color: #ede9fe !important;
+}
+/* ================= FIX TEXT VISIBILITY ================= */
+
+/* Stats Card Text */
+.stat-card,
+.stat-card * {
+    color: #ffffff !important;
+}
+
+/* Birthday Section Main Title */
+.birthday-section h2 {
+    color: #4c1d95 !important;
+}
+
+/* Birthday Card Text Fix */
+.birthday-card,
+.birthday-card * {
+    color: #ffffff !important;
+}
+
+/* Make subtle info readable */
+.birthday-info p {
+    opacity: 0.95;
+}
+
+/* Next Birthday black block text */
+.dashboard-analytics,
+.dashboard-analytics * {
+    color: #ffffff !important;
+}
+
+/* Fix headings */
+.dashboard-title,
+h1, h2, h3 {
+    color: #4c1d95 !important;
+}
+/* ================= TEXT VISIBILITY FIX ================= */
+
+/* Page Background */
+body {
+    background: #e9d5ff;   /* light lavender */
+    color: #2e1065;        /* dark purple text default */
+}
+
+/* Navbar */
+.navbar {
+    background: #6d28d9;   /* strong purple */
+    color: #ffffff;
+}
+
+.navbar span,
+.navbar a {
+    color: #ffffff;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    color: #4c1d95;   /* dark purple */
+}
+
+/* Stats Cards */
+.stat-card {
+    background: #ffffff;
+    color: #2e1065;   /* dark text */
+}
+
+.stat-card .stat-number {
+    color: #6d28d9;   /* purple highlight */
+    font-weight: 700;
+}
+
+/* Birthday Section */
+.birthday-section {
+    background: #ffffff;
+    color: #2e1065;
+}
+
+/* Birthday Cards */
+.birthday-card {
+    background: #ede9fe;   /* very light purple */
+    color: #2e1065;        /* dark text */
+}
+
+.birthday-card strong {
+    color: #4c1d95;
+}
+
+.birthday-card p {
+    color: #3b0764;
+}
+
+/* Highlighted First Card */
+.birthday-card:first-child {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    color: #ffffff;
+}
+
+.birthday-card:first-child strong,
+.birthday-card:first-child p {
+    color: #ffffff;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn,
+.add-btn,
+.super-btn {
+    background: #6d28d9;
+    color: #ffffff;
+}
+
+.edit-btn:hover,
+.delete-btn:hover,
+.add-btn:hover,
+.super-btn:hover {
+    background: #5b21b6;
+}
+
+/* Analytics Card */
+.analytics-card {
+    background: #ffffff;
+    color: #2e1065;
+}
+/* ===== FIX DASHBOARD TOP STATS VISIBILITY ===== */
+
+.stat-card {
+    background: #ffffff !important;
+    color: #2e1065 !important;   /* dark purple text */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.stat-card .stat-number {
+    color: #6d28d9 !important;   /* strong purple number */
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.stat-card div:last-child {
+    color: #4c1d95 !important;   /* label text */
+    font-weight: 500;
+}    
+/* ===== FIX BIRTHDAY CARD TEXT VISIBILITY ===== */
+
+.birthday-card {
+    background: #ffffff !important;
+    color: #2e1065 !important;  /* dark purple text */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.birthday-card strong {
+    color: #4c1d95 !important;
+    font-weight: 700;
+}
+
+.birthday-card p {
+    color: #3b0764 !important;
+    font-weight: 500;
+}
+
+.countdown {
+    color: #6d28d9 !important;
+    font-weight: 600;
+}
+
+/* Keep age badge purple */
+.age-badge {
+    background: #6d28d9 !important;
+    color: #ffffff !important;
+}
+
+/* Hover effect clean */
+.birthday-card:hover {
+    background: #f3e8ff !important;
+    transform: translateY(-3px);
+}
+/* ===== FORCE VISIBILITY FOR BIRTHDAY DETAILS ===== */
+
+.birthday-card {
+    background: #ffffff !important;
+}
+
+/* Name */
+.birthday-card strong {
+    color: #2e1065 !important;
+}
+
+/* Date / Relation / Phone */
+.birthday-card p {
+    color: #3b0764 !important;
+    opacity: 1 !important;
+}
+
+/* If you are using .birthday-info wrapper */
+.birthday-info {
+    color: #3b0764 !important;
+}
+
+.birthday-info p {
+    color: #3b0764 !important;
+}
+
+/* Remove accidental transparency */
+.birthday-card * {
+    opacity: 1 !important;
+}
+/* ===== REMOVE FADE / OPACITY ISSUE ===== */
+
+.birthday-card,
+.birthday-card *,
+.birthday-info,
+.birthday-info * {
+    opacity: 1 !important;
+}
+
+/* Force dark readable text */
+.birthday-card {
+    background: #ffffff !important;
+    color: #2e1065 !important;
+}
+
+.birthday-card strong {
+    color: #2e1065 !important;
+}
+
+.birthday-card p,
+.birthday-card span,
+.birthday-card div {
+    color: #3b0764 !important;
+    font-weight: 500;
+}
+/* ===== FIX FORM INPUT VISIBILITY ===== */
+
+input,
+select {
+    background: #ffffff !important;
+    color: #2e1065 !important;   /* dark purple text */
+    border: 1px solid #c4b5fd;
+}
+
+input::placeholder {
+    color: #7c3aed !important;
+    opacity: 0.7;
+}
+
+select option {
+    color: #2e1065 !important;
+}
+
+/* Apply button */
+button,
+.apply-btn {
+    background: #6d28d9 !important;
+    color: #ffffff !important;
+}
+
+button:hover,
+.apply-btn:hover {
+    background: #5b21b6 !important;
+}
+/* ===== FINAL FIX FOR NEXT BIRTHDAY BLOCK ===== */
+
+.next-birthday {
+    background: linear-gradient(135deg, #6d28d9, #7c3aed) !important;
+    color: #ffffff !important;
+    padding: 20px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 8px 25px rgba(109, 40, 217, 0.25) !important;
+}
+
+/* Force inside text visible */
+.next-birthday * {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+/* ===== FIX ONLY BLACK NEXT BIRTHDAY BOX ===== */
+
+.next-birthday {
+    background: #ffffff !important;      /* white card */
+    color: #2e1065 !important;           /* dark purple text */
+    border-radius: 12px;
+    padding: 18px 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Inside text visible */
+.next-birthday * {
+    color: #2e1065 !important;
+}
+
+/* Highlight title */
+.next-birthday strong {
+    color: #6d28d9 !important;
+}
+/* ===== FORCE REMOVE BLACK ANALYTICS BACKGROUND ===== */
+
+.dashboard-analytics,
+.dashboard-analytics > div,
+.analytics-section,
+.analytics-container {
+    background: transparent !important;
+}
+
+/* Now style only the Next Birthday card */
+.next-birthday {
+    background: linear-gradient(135deg, #6d28d9, #7c3aed) !important;
+    color: #ffffff !important;
+    padding: 18px 22px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(109, 40, 217, 0.3);
+}
+
+/* Text inside white */
+.next-birthday * {
+    color: #ffffff !important;
+}
+/* ===== REMOVE ALL BLACK BACKGROUNDS INSIDE ANALYTICS ===== */
+
+#dashboard-analytics *,
+.dashboard-analytics *,
+.dashboard-analytics div {
+    background-color: transparent !important;
+}
+
+/* Now style only Next Birthday card */
+.next-birthday,
+.dashboard-analytics .next-birthday,
+.dashboard-analytics > div:first-child {
+    background: linear-gradient(135deg, #6d28d9, #7c3aed) !important;
+    color: #ffffff !important;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+/* Force text white */
+.next-birthday * {
+    color: #ffffff !important;
+}
+/* ========================= */
+/* ULTRA PREMIUM EDIT PAGE  */
+/* ========================= */
+
+/* Animated Background */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(-45deg, #eef2ff, #e0e7ff, #ddd6fe, #ede9fe);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+/* Center Layout */
+
+.premium-edit-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glass Card */
+
+.premium-edit-card {
+    width: 720px;              /* MUCH BIGGER */
+    padding: 70px 70px;
+    border-radius: 30px;
+
+    background: rgba(124, 58, 237, 0.85);
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 40px 80px rgba(124, 58, 237, 0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.15);
+
+    animation: slideUp 0.8s ease;
+}
+
+/* Heading */
+
+.edit-header {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 45px;
+}
+
+/* Input Group */
+
+.input-group {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+/* Icon */
+
+.input-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Input */
+
+.input-group input {
+    width: 100%;
+    padding: 18px 20px 18px 55px;
+    border-radius: 16px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+
+    background: rgba(255,255,255,0.95);
+    color: #4c1d95;
+
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Update Button */
+
+.super-btn {
+    width: 100%;
+    padding: 18px;
+    margin-top: 25px;
+    border-radius: 18px;
+    border: none;
+
+    background: linear-gradient(135deg, #ffffff, #f3e8ff);
+    color: #6d28d9;
+
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.super-btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+/* Back Button */
+
+.back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    color: #f5f3ff;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+
+@keyframes slideUp {
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* ============================= */
+/* PREMIUM ADD BIRTHDAY PAGE    */
+/* ============================= */
+
+/* Background same animated soft gradient */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(-45deg, #eef2ff, #e0e7ff, #ddd6fe, #ede9fe);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+/* Center Layout */
+
+.add-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glass Card */
+
+.add-card {
+    width: 720px;
+    padding: 70px 70px;
+    border-radius: 30px;
+
+    background: rgba(124, 58, 237, 0.85);
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 40px 80px rgba(124, 58, 237, 0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.15);
+
+    animation: slideUp 0.8s ease;
+}
+
+/* Heading */
+
+.add-card h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #ede9fe;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+/* Floating Input Group */
+
+.floating-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Input */
+
+.floating-group input {
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 16px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+
+    background: rgba(255,255,255,0.95);
+    color: #4c1d95;
+
+    transition: all 0.3s ease;
+}
+
+/* Floating Label */
+
+.floating-group label {
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    color: #6d28d9;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* When typing */
+
+.floating-group input:focus + label,
+.floating-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 15px;
+    font-size: 12px;
+    background: #ffffff;
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+/* Input focus effect */
+
+.floating-group input:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Save Button */
+
+.add-btn {
+    width: 100%;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 18px;
+    border: none;
+
+    background: linear-gradient(135deg, #ffffff, #f3e8ff);
+    color: #6d28d9;
+
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+/* Back link */
+
+.dashboard-link {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    color: #f5f3ff;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.dashboard-link:hover {
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+
+@keyframes slideUp {
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ============================= */
+/* PREMIUM LOGIN PAGE           */
+/* ============================= */
+
+/* Background */
+
+.auth-body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(-45deg, #eef2ff, #e0e7ff, #ddd6fe, #ede9fe);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+/* Center Layout */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Glass Card */
+
+.auth-card {
+    width: 680px;
+    height: 650px;
+    padding: 60px 55px;
+    border-radius: 28px;
+
+    background: rgba(124, 58, 237, 0.85);
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 40px 80px rgba(124, 58, 237, 0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.15);
+
+    animation: slideUp 0.8s ease;
+    text-align: center;
+}
+
+/* Heading */
+
+.auth-card h2 {
+    color: #ffffff;
+    font-size: 34px;
+    margin-bottom: 28px;
+}
+
+.auth-card .subtitle {
+    color: #ede9fe;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+/* Inputs */
+
+.auth-card input {
+    width: 100%;
+    padding: 16px 18px;
+    margin-bottom: 28px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+
+    background: rgba(255,255,255,0.95);
+    color: #4c1d95;
+
+    transition: 0.3s ease;
+}
+
+.auth-card input:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Button */
+
+.btn-primary {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+
+    background: linear-gradient(135deg, #ffffff, #f3e8ff);
+    color: #6d28d9;
+
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Flash Message */
+
+.flash-box {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+/* Bottom Text */
+
+.bottom-text {
+    margin-top: 30px;
+    color: #ede9fe;
+    font-size: 20px;
+}
+
+.bottom-text a {
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.bottom-text a:hover {
+    text-decoration: underline;
+}
+.auth-extra {
+    margin-top: 35px;
+    font-size: 24px;
+    color: #e2d5e9;
+    opacity: 0.9;
+}
+/* NAVBAR MAIN */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-text {
+    font-weight: 700;
+}
+
+/* ICON BUTTON (Moon) */
+.icon-btn {
+    padding: 6px;
+    background: transparent;
+    border: 10px solid transparent;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* PROFILE BUTTON */
+
+
+
+.profile-btn {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.profile-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #ff4b2b;
+    color: white;
+    text-decoration: aliceblue;
+    transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #ff1c1c;
+}
+.profile-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+.profile-image-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.upload-label {
+    display: inline-block;
+    background: white;
+    color: #7a00cc;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.upload-label:hover {
+    background: #f2f2f2;
+}
+
+.auth-card {
+    background: linear-gradient(135deg, #8e2de2, #c471ed);
+    width: 680px;
+    height: auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #6a00f4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #5000c9;
+    
+}
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.password-form input,
+.password-form button,
+.btn-secondary {
+    width: 100%;
+}
+.dashboard-link {
+    display: block;
+    margin-top: 20px;
+}
+.profile-emoji {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin: 0 auto 15px auto;
+    border: 4px solid white;
+}
+.nav-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-avatar-emoji {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.nav-avatar-emoji {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #7b2ff7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.edit-body {
+    background: url("/static/images/edit-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.password-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 16px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}

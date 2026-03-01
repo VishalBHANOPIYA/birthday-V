@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Birthday</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="add-wrapper">
+
+    <div class="add-card">
+
+        <h2>🎂 Add New Birthday</h2>
+        <p class="subtitle">Save special moments beautifully</p>
+
+        <form method="POST">
+
+            <div class="floating-group">
+                <input type="text" name="name" required placeholder=" ">
+                <label>Full Name</label>
+            </div>
+
+            <div class="floating-group">
+                <input type="date" name="date" required placeholder=" ">
+                <label>Date of Birth</label>
+            </div>
+
+            <div class="floating-group">
+                <input type="text" name="relation" required placeholder=" ">
+                <label>Relation</label>
+            </div>
+
+            <div class="floating-group">
+                <input type="text" name="phone" required placeholder=" ">
+                <label>Phone Number</label>
+            </div>
+
+            <button type="submit" class="add-btn">
+                ✨ Save Birthday
+            </button>
+
+            <a href="{{ url_for('home') }}" class="dashboard-link">
+                ← Back to Dashboard
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="auth-body">
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <h2>👤 Profile</h2>
+
+        <div style="margin-bottom:20px;">
+            <p><strong>Username:</strong> {{ username }}</p>
+            <p><strong>Total Birthdays:</strong> {{ total_birthdays }}</p>
+        </div>
+
+        <h3>🔒 Change Password</h3>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-box">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <input type="password" name="current_password" placeholder="Current Password" required>
+            <input type="password" name="new_password" placeholder="New Password" required>
+            <button type="submit" class="btn-primary">
+                Update Password
+            </button>
+        </form>
+
+        <br>
+
+        <a href="{{ url_for('home') }}" class="dashboard-link">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

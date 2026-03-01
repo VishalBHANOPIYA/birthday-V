@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Birthday Reminder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="auth-body">
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+            
+            <h2>Create Account 🚀</h2>
+            <p class="subtitle">Join Birthday Reminder</p>
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="flash-box">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Register Form -->
+            <form method="POST">
+
+                <input 
+                    type="text" 
+                    name="username" 
+                    placeholder="Choose Username"
+                    required
+                >
+<div class="password-wrapper">
+    <input type="password" id="reg-password" name="password" placeholder="Password" required>
+    <span class="toggle-eye" onclick="togglePassword('reg-password', this)">👁️</span>
+</div>
+
+                <button type="submit" class="btn-primary">
+                    Register
+                </button>
+
+            </form>
+
+            <p class="bottom-text">
+                Already have an account?
+                <a href="{{ url_for('login') }}">Login</a>
+            </p>
+            <p class="auth-extra">
+    🎂 Never miss a special day again.
+</p>
+
+        </div>
+
+    </div>
+
+<script>
+function togglePassword(fieldId, element) {
+    const passwordField = document.getElementById(fieldId);
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        element.textContent = "🙈";
+    } else {
+        passwordField.type = "password";
+        element.textContent = "👁️";
+    }
+}
+</script>
+</body>
+</html>
